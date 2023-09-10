@@ -1,0 +1,146 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "dress",
+      "price": 100,
+      "category": [
+        "Children"
+      ],
+      "size": [
+        20,
+        30,
+        40,
+        45
+      ],
+      "brand": "Puma",
+      "rating": 3
+    },
+    {
+      "id": 4,
+      "name": "short",
+      "price": 200,
+      "category": [
+        "Men"
+      ],
+      "size": [
+        20,
+        30,
+        40
+      ],
+      "brand": "Zara",
+      "rating": 4
+    },
+    {
+      "id": 6,
+      "name": "jacket",
+      "price": 250,
+      "category": [
+        "Men"
+      ],
+      "size": [
+        20,
+        24,
+        26,
+        30
+      ],
+      "brand": "H&M",
+      "rating": 4
+    },
+    {
+      "id": 7,
+      "name": "blazer",
+      "price": 400,
+      "category": [
+        "Women"
+      ],
+      "size": [
+        40,
+        44,
+        42
+      ],
+      "brand": "Gucci",
+      "rating": 3
+    },
+    {
+      "id": 8,
+      "name": "wrapover",
+      "price": 500,
+      "category": [
+        "Children"
+      ],
+      "size": [
+        40,
+        30
+      ],
+      "brand": "others",
+      "rating": 2
+    },
+    {
+      "id": 9,
+      "name": "sweatshirt",
+      "price": 1100,
+      "category": [
+        "Men",
+        "Women",
+        "Children"
+      ],
+      "size": [
+        30,
+        32,
+        34,
+        36
+      ],
+      "brand": "Nike",
+      "rating": 5
+    },
+    {
+      "id": 10,
+      "name": "hoodie",
+      "price": 1199,
+      "category": [
+        "Women"
+      ],
+      "size": [
+        30,
+        40,
+        35
+      ],
+      "brand": "Tommy",
+      "rating": 4
+    },
+    {
+      "name": "t",
+      "price": 120,
+      "size": [
+        "50",
+        "30",
+        "40"
+      ],
+      "category": [
+        "Children",
+        "Women"
+      ],
+      "rating": 5,
+      "brand": "Puma",
+      "id": 14
+    },
+    {
+      "name": "m",
+      "price": 120,
+      "size": [
+        "12",
+        "23",
+        "43",
+        "54"
+      ],
+      "category": [
+        "Children",
+        "Women"
+      ],
+      "rating": 1,
+      "brand": "H&M",
+      "id": 15
+    }
+  ]
+}
