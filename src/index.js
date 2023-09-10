@@ -7,6 +7,7 @@ import EditPage from './components/dashboard/edit-product/EditPage';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import AddProduct from './components/dashboard/add-product/AddProduct';
 
+
 const router = createBrowserRouter([
   {
     path: '/',
