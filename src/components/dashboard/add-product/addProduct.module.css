@@ -1,0 +1,60 @@
+.edit-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5%;
+    font-size: 1rem;
+    padding: 3rem;
+}
+
+.edit-page>img {
+    max-width: 25%;
+    border: 1px solid black;
+    border-radius: 2rem;
+}
+
+.form-edit {
+    width: 50%;
+    height: 100%;
+}
+
+[type="text"],
+[type="number"] {
+    border-radius: 1rem;
+    border: 1px solid gray;
+    outline: none;
+    padding-left: 2rem;
+    font-size: 1.3rem;
+}
+
+.grid label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form>div {
+    margin-bottom: 3rem;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 4rem auto 4rem;
+    grid-template-rows: repeat(4, 3rem);
+    gap: 4%;
+}
+
+.title-field {
+    font-size: 1.5rem;
+}
+
+.brand-edit,
+.category-edit {
+    margin-top: 2rem;
+}
+
+label,
+label+[type="checkbox"] {
+    margin-right: 1rem;
+    margin-bottom: 0.7rem;
+}

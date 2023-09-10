@@ -1,11 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
-import Dashboard from './dashboard/Dashboard';
-import EditPage from './dashboard/EditPage';
+import App from './components/App';
+import Dashboard from './components/dashboard/Dashboard';
+import EditPage from './components/dashboard/edit-product/EditPage';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
-import AddProduct from './dashboard/AddProduct';
+import AddProduct from './components/dashboard/add-product/AddProduct';
 
 const router = createBrowserRouter([
   {

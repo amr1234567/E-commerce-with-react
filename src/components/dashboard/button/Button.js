@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import styles from './button.module.css';
 
 export default function Button({ link, className, hundleClick, text }) {
     return (
@@ -7,7 +8,7 @@ export default function Button({ link, className, hundleClick, text }) {
             to={link}
         >
             <button
-                className={'btn ' + className}
+                className={styles.btn + ' ' + styles[className]}
                 onClick={hundleClick}
             >
                 {text}

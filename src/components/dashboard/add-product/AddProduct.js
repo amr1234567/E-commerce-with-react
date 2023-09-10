@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState  } from 'react';
 import { Navigate } from 'react-router-dom';
+import styles from './addProduct.module.css';
 
 export default function AddProduct() {
     const [name, setName] = useState({ data: '', isEmpty: false, isWrong: false });
@@ -81,10 +82,10 @@ export default function AddProduct() {
         }
     }
     return (
-        <div className="edit-page">
-            <div className="form-edit">
-                <form className="form-edit-add" onSubmit={hundleFormValidation}>
-                    <div className="grid">
+        <div className={styles['edit-page']}>
+            <div className={styles['form-edit']}>
+                <form className={styles['form-edit-add']} onSubmit={hundleFormValidation}>
+                    <div className={styles['grid']}>
                         <label htmlFor="name" >Name</label>
                         <input
                             type="text"
@@ -122,8 +123,8 @@ export default function AddProduct() {
                         />
                         <span>{rating.isEmpty ? "this field can't be empty" : rating.isWrong ? "invalid rate" : ''}</span>
                     </div>
-                    <span className='title-field'>Brand</span>
-                    <div className="brand">
+                    <span className={styles['title-field']}>Brand</span>
+                    <div className={styles["brand-edit"]}>
                         <label htmlFor="Gucci">Gucci
                             <input
                                 type="radio"
@@ -206,8 +207,8 @@ export default function AddProduct() {
                         </label>
                         <span>{brand.isEmpty ? "this field can't be empty" : brand.isWrong ? "invalid brand" : ''}</span>
                     </div>
-                    <span className='title-field'>Category</span>
-                    <div className="category">
+                    <span className={styles['title-field']}>Category</span>
+                    <div className={styles['category-edit']}>
                         <label htmlFor="Men">Men</label>
                         <input
                             type="checkbox"

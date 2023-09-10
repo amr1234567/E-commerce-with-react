@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react'
-import womenImg1 from '../assets/women/image1.svg'
-import womenImg2 from '../assets/women/image2.svg'
-import womenImg3 from '../assets/women/image3.svg'
-import womenImg4 from '../assets/women/image4.svg'
-import womenImg5 from '../assets/women/image5.svg'
-import womenImg6 from '../assets/women/image6.svg'
-import manImg1 from '../assets/men/image1.jpg'
-import manImg2 from '../assets/men/image2.jpg'
-import manImg3 from '../assets/men/image3.jpg'
-import manImg4 from '../assets/men/image4.jpg'
-import manImg5 from '../assets/men/image5.jpg'
-import Button from './Button'
+import womenImg1 from '../../assets/women/image1.svg'
+import womenImg2 from '../../assets/women/image2.svg'
+import womenImg3 from '../../assets/women/image3.svg'
+import womenImg4 from '../../assets/women/image4.svg'
+import womenImg5 from '../../assets/women/image5.svg'
+import womenImg6 from '../../assets/women/image6.svg'
+import manImg1 from '../../assets/men/image1.jpg'
+import manImg2 from '../../assets/men/image2.jpg'
+import manImg3 from '../../assets/men/image3.jpg'
+import manImg4 from '../../assets/men/image4.jpg'
+import manImg5 from '../../assets/men/image5.jpg'
+import Button from './button/Button'
 import ProductCard from './ProductCard'
+import styles from './dashboard.module.css'
 
 let imagesURLWomen = [womenImg1, womenImg2, womenImg3, womenImg4, womenImg5, womenImg6];
 let imagesURLMen = [manImg1, manImg2, manImg3, manImg4, manImg5]
@@ -47,10 +48,10 @@ export default function Dashboard() {
             .then(() => setSearch(0))
     }
     return (
-        <div className="dashboard-page">
-            <header className='header-dash'>
-                <a href='/'>E-Commerce</a>
-                <div className="buttons-header-dash">
+        <div className={styles["dashboard-page"]}>
+            <header className={styles['header-dash']}>
+                <a href='/' className={styles['header-links']}>E-Commerce</a>
+                <div className={styles["buttons-header-dash"]}>
                     <Button
                         text={'Add Product'}
                         className={'add-dash'}
@@ -74,8 +75,8 @@ export default function Dashboard() {
                     />
                 </div>
             </header>
-            <main className='products-cards-dash'>
-                <div className="buttons-order">
+            <main className={styles['products-cards-dash']}>
+                <div className={styles["buttons-order"]}>
                     <Button
                         className={'sort-des'}
                         hundleClick={() => {

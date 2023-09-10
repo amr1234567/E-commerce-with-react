@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Navigate, useParams } from 'react-router-dom';
+import styles from './editProduct.module.css';
+import btnStyles from '../button/button.module.css'
 
 export default function EditPage() {
     const [imgUrl, setImgUrl] = useState({ data: '', isEmpty: false, isWrong: false })
@@ -88,16 +90,16 @@ export default function EditPage() {
                 method: 'PUT',
                 body: JSON.stringify(obj),
                 headers: { "Content-Type": "application/json", }
-            }).then(()=> console.log('all is fine')).catch(e=>console.log(e))
+            }).then(() => console.log('all is fine')).catch(e => console.log(e))
             setNavOk([true, true])
         }
     }
     return (
-        <div className="edit-page">
+        <div className={styles["edit-page"]}>
             <img src={imgUrl.data} alt="" />
-            <div className="form-edit">
-                <form className="form-edit-add" onSubmit={hundleFormValidation}>
-                    <div className="grid">
+            <div className={styles["form-edit"]}>
+                <form className={styles["form-edit-add"]} onSubmit={hundleFormValidation}>
+                    <div className={styles["grid"]}>
                         <label htmlFor="name" >Name</label>
                         <input
                             type="text"
@@ -139,8 +141,8 @@ export default function EditPage() {
                         />
                         <span>{rating.isEmpty ? "this field can't be empty" : rating.isWrong ? "invalid rate" : ''}</span>
                     </div>
-                    <span className='title-field'>Brand</span>
-                    <div className="brand-edit">
+                    <span className={styles['title-field']}>Brand</span>
+                    <div className={styles["brand-edit"]}>
                         <label htmlFor="Gucci">Gucci
                             <input
                                 type="radio"
@@ -223,8 +225,8 @@ export default function EditPage() {
                         </label>
                         <span>{brand.isEmpty ? "this field can't be empty" : brand.isWrong ? "invalid brand" : ''}</span>
                     </div>
-                    <span className='title-field'>Category</span>
-                    <div className="category-edit">
+                    <span className={styles['title-field']}>Category</span>
+                    <div className={styles["category-edit"]}>
                         <label htmlFor="Men">Men</label>
                         <input
                             type="checkbox"
@@ -262,7 +264,7 @@ export default function EditPage() {
                         /><br />
                         <span>{category.isEmpty ? "this field can't be empty" : category.isWrong ? "invalid category" : ''}</span>
                     </div>
-                    <button className=' btn save'>Save</button>
+                    <button className={styles['save'] + btnStyles.btn}>Save</button>
                 </form>
                 {navOk[1] && <Navigate to={'/dashboard'} replace={true}></Navigate>}
             </div>
