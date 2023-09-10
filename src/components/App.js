@@ -3,7 +3,6 @@ import Button from './dashboard/button/Button'
 import './app.css';
 import styles from './dashboard/button/button.module.css'
 
-
 function App() {
   return (
     <div className="App">
@@ -21,7 +20,7 @@ function App() {
           <p className="decoration b">Unique</p>
           <p className="b">Clothes.</p>
           <p className="parag">Live for Influential and Innovative fashion!</p>
-          <Button className={' shop-now'} link="#"  text={'Shop Now'} hundleClick={()=>{}}/>
+          <Button className={' shop-now'} link="#" text={'Shop Now'} hundleClick={() => { }} />
         </div>
         <img src="assets/women/main-photo.png" alt="" />
       </section>
@@ -48,34 +47,57 @@ function App() {
       <footer className="d-flex flex-wrap">
         <div className="info d-flex flex-column w-25">
           <h2>
-            <a href>E-Commerce</a>
+            <a href='/'>E-Commerce</a>
           </h2>
           <p>Complete your style with awesome clothes from us.</p>
           <div className="mt-5 social-icons d-flex justify-content-around w-xxl-25 w-sm-100">
-            <div className="icon d-flex align-items-center justify-content-center rounded-3"><Link to="#"></Link></div>
-            <div className="icon d-flex align-items-center justify-content-center rounded-3 "><a href><i className="fa-brands fa-instagram" /></a></div>
-            <div className="icon d-flex align-items-center justify-content-center rounded-3"><a href><i className="fa-brands fa-twitter" /></a></div>
-            <div className="icon d-flex align-items-center justify-content-center rounded-3"><a href><i className="fa-brands fa-linkedin-in" /></a></div>
+            <div
+              className="icon d-flex align-items-center justify-content-center rounded-3">
+              <Link to={'/'}>
+                <svg xmlns="http://www.w3.org/2000/svg"
+                  height="1em" viewBox="0 0 320 512">
+                  <path d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z" />
+                </svg>
+              </Link>
+            </div>
+            <div
+              className="icon d-flex align-items-center justify-content-center rounded-3 ">
+              <Link to={'/'}>
+                <i className="fa-brands fa-instagram" />
+              </Link>
+            </div>
+            <div
+              className="icon d-flex align-items-center justify-content-center rounded-3">
+              <Link to={'/'}>
+                <i className="fa-brands fa-twitter" />
+              </Link>
+            </div>
+            <div
+              className="icon d-flex align-items-center justify-content-center rounded-3">
+              <Link to={'/'}>
+                <i className="fa-brands fa-linkedin-in" />
+              </Link>
+            </div>
           </div>
         </div>
         <div className="footer-divs d-flex flex-column">
           <h5>Developers</h5>
-          <a href>About</a>
-          <a href>Contact us</a>
-          <a href>Support</a>
-          <a href>Careers</a>
+          <a href='/'>About</a>
+          <a href='/'>Contact us</a>
+          <a href='/'>Support</a>
+          <a href='/'>Careers</a>
         </div>
         <div className="footer-divs d-flex flex-column">
           <h5>Quick Link</h5>
-          <a href>Share Location</a>
-          <a href>Orders Tracking</a>
-          <a href>Size Guide</a>
-          <a href>FAQs</a>
+          <a href='/'>Share Location</a>
+          <a href='/'>Orders Tracking</a>
+          <a href='/'>Size Guide</a>
+          <a href='/'>FAQs</a>
         </div>
         <div className="footer-divs d-flex flex-column">
           <h5>Legal</h5>
-          <a href>Terms &amp; conditions</a>
-          <a href>Privacy Policy</a>
+          <a href='/'>Terms &amp; conditions</a>
+          <a href='/'>Privacy Policy</a>
         </div>
       </footer>
     </div>
