@@ -1,35 +1,35 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "dress",
+      "name": "dresa",
       "price": 100,
+      "size": [
+        "20",
+        "30",
+        "40",
+        "45"
+      ],
       "category": [
         "Children"
       ],
-      "size": [
-        20,
-        30,
-        40,
-        45
-      ],
-      "brand": "Puma",
-      "rating": 3
+      "rating": 3,
+      "brand": "Zara",
+      "id": 1
     },
     {
-      "id": 4,
-      "name": "short",
+      "name": "shortt",
       "price": 200,
+      "size": [
+        "20",
+        "30",
+        "40"
+      ],
       "category": [
         "Men"
       ],
-      "size": [
-        20,
-        30,
-        40
-      ],
+      "rating": 4,
       "brand": "Zara",
-      "rating": 4
+      "id": 4
     },
     {
       "id": 6,

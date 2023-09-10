@@ -76,19 +76,20 @@ export default function EditPage() {
             !rating.isEmpty && !rating.isWrong &&
             !brand.isEmpty && !brand.isWrong &&
             !category.isEmpty && !category.isWrong) {
+            let obj = {
+                name: name.data,
+                price: price.data,
+                size: size.data.split('-'),
+                category: (category.data[0]) ? category.data : category.data.slice(1),
+                rating: rating.data,
+                brand: brand.data
+            };
             fetch(`http://localhost:8000/products/${id}`, {
                 method: 'PUT',
-                body: JSON.stringify({
-                    name: name.data,
-                    price: price.data,
-                    size: size.data.split('-'),
-                    category: (category.data[0]) ? category.data : category.data.slice(1),
-                    rating: rating.data,
-                    brand: brand.data
-                }),
+                body: JSON.stringify(obj),
                 headers: { "Content-Type": "application/json", }
             }).then(()=> console.log('all is fine')).catch(e=>console.log(e))
-            setNavOk([true, false])
+            setNavOk([true, true])
         }
     }
     return (
@@ -261,7 +262,7 @@ export default function EditPage() {
                         /><br />
                         <span>{category.isEmpty ? "this field can't be empty" : category.isWrong ? "invalid category" : ''}</span>
                     </div>
-                    <button>Save</button>
+                    <button className=' btn save'>Save</button>
                 </form>
                 {navOk[1] && <Navigate to={'/dashboard'} replace={true}></Navigate>}
             </div>
