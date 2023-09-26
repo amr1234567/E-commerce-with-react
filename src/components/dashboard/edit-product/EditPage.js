@@ -4,8 +4,9 @@ import styles from './editProduct.module.css';
 import btnStyles from '../button/button.module.css'
 
 export default function EditPage() {
-    const [imgUrl, setImgUrl] = useState({ data: '', isEmpty: false, isWrong: false })
     const { id } = useParams();
+    const [imgUrl, setImgUrl] = useState({ data: '', isEmpty: false, isWrong: false })
+    
     const [name, setName] = useState({ data: '', isEmpty: false, isWrong: false });
     const [price, setPrice] = useState({ data: 0, isEmpty: false, isWrong: false });
     const [rating, setRating] = useState({ data: 0, isEmpty: false, isWrong: false });

@@ -17,21 +17,6 @@
       "id": 1
     },
     {
-      "name": "shortt",
-      "price": 200,
-      "size": [
-        "20",
-        "30",
-        "40"
-      ],
-      "category": [
-        "Men"
-      ],
-      "rating": 4,
-      "brand": "Zara",
-      "id": 4
-    },
-    {
       "id": 6,
       "name": "jacket",
       "price": 250,
@@ -48,6 +33,21 @@
       "rating": 4
     },
     {
+      "name": "shortt",
+      "price": 200,
+      "size": [
+        "20",
+        "30",
+        "40"
+      ],
+      "category": [
+        "Men"
+      ],
+      "rating": 4,
+      "brand": "Zara",
+      "id": 4
+    },
+    {
       "id": 7,
       "name": "blazer",
       "price": 400,
@@ -61,20 +61,6 @@
       ],
       "brand": "Gucci",
       "rating": 3
-    },
-    {
-      "id": 8,
-      "name": "wrapover",
-      "price": 500,
-      "category": [
-        "Children"
-      ],
-      "size": [
-        40,
-        30
-      ],
-      "brand": "others",
-      "rating": 2
     },
     {
       "id": 9,
@@ -93,54 +79,6 @@
       ],
       "brand": "Nike",
       "rating": 5
-    },
-    {
-      "id": 10,
-      "name": "hoodie",
-      "price": 1199,
-      "category": [
-        "Women"
-      ],
-      "size": [
-        30,
-        40,
-        35
-      ],
-      "brand": "Tommy",
-      "rating": 4
-    },
-    {
-      "name": "t",
-      "price": 120,
-      "size": [
-        "50",
-        "30",
-        "40"
-      ],
-      "category": [
-        "Children",
-        "Women"
-      ],
-      "rating": 5,
-      "brand": "Puma",
-      "id": 14
-    },
-    {
-      "name": "m",
-      "price": 120,
-      "size": [
-        "12",
-        "23",
-        "43",
-        "54"
-      ],
-      "category": [
-        "Children",
-        "Women"
-      ],
-      "rating": 1,
-      "brand": "H&M",
-      "id": 15
     }
   ]
 }

@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import App from './components/App';
-import Dashboard from './components/dashboard/Dashboard';
+import { DashBoardContainer } from './components/dashboard/main-page/Dashboard';
 import EditPage from './components/dashboard/edit-product/EditPage';
 import { RouterProvider, createBrowserRouter } from 'react-router-dom'
 import AddProduct from './components/dashboard/add-product/AddProduct';
@@ -15,7 +15,7 @@ const router = createBrowserRouter([
     errorElement: <div className="error"> write a correct path</div>
   }, {
     path: '/dashboard',
-    element: <Dashboard />
+    element: <DashBoardContainer />
   }, {
     path: '/editProduct/:id',
     element: <EditPage />
