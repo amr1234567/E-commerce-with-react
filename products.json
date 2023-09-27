@@ -10,7 +10,7 @@
         "45"
       ],
       "category": [
-        "Children"
+        "children"
       ],
       "rating": 3,
       "brand": "Zara",
@@ -21,7 +21,7 @@
       "name": "jacket",
       "price": 250,
       "category": [
-        "Men"
+        "men"
       ],
       "size": [
         20,
@@ -41,7 +41,7 @@
         "40"
       ],
       "category": [
-        "Men"
+        "men"
       ],
       "rating": 4,
       "brand": "Zara",
@@ -52,7 +52,7 @@
       "name": "blazer",
       "price": 400,
       "category": [
-        "Women"
+        "women"
       ],
       "size": [
         40,
@@ -67,9 +67,9 @@
       "name": "sweatshirt",
       "price": 1100,
       "category": [
-        "Men",
-        "Women",
-        "Children"
+        "men",
+        "women",
+        "children"
       ],
       "size": [
         30,

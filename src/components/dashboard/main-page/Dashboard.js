@@ -8,14 +8,6 @@ import Header from './Header'
 
 function Dashboard() {
     const { data, decindingOrder, assendingOrder } = useProducts()
-    let hundleDelete = (i) => {
-        fetch(`http://localhost:8000/products/${i}`, {
-            method: 'DELETE'
-        }).then(console.log(`item with id ${i} has been deleted`)).then(() => {
-            // fetchData(dispatch, ACTIONS.SET_PRODUCTS)
-        })
-    }
-
     return (
         <div className={styles["dashboard-page"]}>
             <Header />

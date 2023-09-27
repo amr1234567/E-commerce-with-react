@@ -11,6 +11,7 @@ import manImg2 from '../../assets/men/image2.jpg'
 import manImg3 from '../../assets/men/image3.jpg'
 import manImg4 from '../../assets/men/image4.jpg'
 import manImg5 from '../../assets/men/image5.jpg'
+import { useFetch } from '../../Hooks/useFetch'
 
 const imagesURLWomen = [womenImg1, womenImg2, womenImg3, womenImg4, womenImg5, womenImg6];
 const imagesURLMen = [manImg1, manImg2, manImg3, manImg4, manImg5]
@@ -58,6 +59,7 @@ export function useData() {
     const [{ data, searchOpened, search }, dispatch] = useReducer(reduce, { data: [], searchOpened: false, search: '' })
     useEffect(() => {
         // search ? 'http://localhost:8000/products?q=' + search :
+        
         fetch('http://localhost:8000/products')
             .then(res => res.json())
             .then(data => {
@@ -101,7 +103,7 @@ export function useData() {
                     dispatch({ type: ACTIONS.SET_PRODUCTS, payload: data })
                 })
     }
-    
+
     return {
         data,
         searchOpened,

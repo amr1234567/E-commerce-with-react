@@ -41,7 +41,7 @@ form>div {
 
 .grid {
     display: grid;
-    grid-template-columns: 4rem auto 4rem;
+    grid-template-columns: 4rem auto ;
     grid-template-rows: repeat(4, 3rem);
     gap: 4%;
 }
