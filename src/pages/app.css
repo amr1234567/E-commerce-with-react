@@ -155,13 +155,11 @@ header>a {
 .card-product {
     background-color: var(--color4);
     width: 30%;
-    padding: 1rem;
+    padding: 1.5rem 0.5rem;
     margin-bottom: 2rem;
 }
 
-.card-content {
-    padding: 1.5rem 0.5rem;
-}
+
 
 .img-container-product {
     width: 90%;

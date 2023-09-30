@@ -82,22 +82,6 @@
       ],
       "brand": "Nike",
       "rating": 5
-    },
-    {
-      "name": "newOne",
-      "price": 120,
-      "rating": 4.2,
-      "size": [
-        55,
-        65,
-        22
-      ],
-      "brand": "Addidas",
-      "category": [
-        "men",
-        "women"
-      ],
-      "id": 10
     }
   ]
 }

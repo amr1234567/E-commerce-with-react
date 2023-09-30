@@ -148,7 +148,7 @@ export default function EditPage() {
                             <span className={styles.error}>{errors && errors.categoryError}</span>
                         </div>
 
-                        <button disabled={isPending} className={styles['save'] + btnStyles.btn}>{isPending ? 'Saving' : 'Save'}</button>
+                        <button disabled={isPending} className={btnStyles.btn}>{isPending ? 'Saving' : 'Save'}</button>
 
                     </form>
 

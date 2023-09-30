@@ -48,7 +48,11 @@ export default function ProductCard({ itemData }) {
                         className={''}
                         link={'/dashboard'}
                         text={'Delete'}
-                        hundleClick={() => deleteProduct(itemData.id)}
+                        hundleClick={() => {
+                            let sure = window.confirm('u sure u wanna delete this item ?');
+                            if (sure) deleteProduct(itemData.id)
+                                
+                        }}
                     />
                     <Button
                         className={''}
