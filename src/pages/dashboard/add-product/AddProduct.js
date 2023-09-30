@@ -1,11 +1,10 @@
-import React, { useEffect, useId, useState } from 'react'
+import React from 'react'
 import { Navigate, useParams } from 'react-router-dom';
-import styles from './editProduct.module.css';
-import btnStyles from '../button/button.module.css'
+import styles from './addProduct.module.css';
+import btnStyles from '../../../components/button/button.module.css'
 import { useFormHook } from '../../../Hooks/useFormHook';
 
-export default function EditPage() {
-    const [navOk, setNavOk] = useState(false)
+export default function AddProduct() {
     const {
         name,
         price,
@@ -13,57 +12,26 @@ export default function EditPage() {
         brand,
         category,
         rating,
-        setDataOfForm,
+        errors,
+        isPending,
+        confirmed,
         setName,
         setPrice,
         setRating,
         setSize,
         setBrand,
-        setCategory
-    } = useFormHook()
+        setCategory,
+        validate
+    } = useFormHook('POST')
     const { id } = useParams();
-    const [imgUrl,] = useState(new URLSearchParams(window.location.search).get('img'))
-    const idTemplet = useId()
 
-    useEffect(() => {
-        fetch(`http://localhost:8000/products/${id}`).then(data => {
-            return data.json()
-        }).then(product => {
-            setDataOfForm({
-                name: product.name,
-                price: product.price,
-                rating: product.rating,
-                size: product.size.join('-'),
-                category: {
-                    men: product.category.includes('men'),
-                    women: product.category.includes('women'),
-                    childre: product.category.includes('children'),
-                },
-                brand: {
-                    Gucci: product.brand === 'Gucci',
-                    Addidas: product.brand === 'Addidas',
-                    Zara: product.brand === 'Zara',
-                    Puma: product.brand === 'Puma',
-                    Tommy: product.brand === 'Tommy',
-                    Nike: product.brand === 'Nike',
-                    others: product.brand === 'others'
-                }
-            })
-        })
-    }, [])
     const brandsArr = ['Gucci', 'Addidas', 'Zara', 'Puma', 'Tommy', 'Nike', 'others']
     const categories = ['men', 'women', 'children']
-    let onSubmit = (e) => {
-        e.preventDefault()
-        let formData = new FormData(e.target)
-        console.log(formData)
-    }
     return (
         <>
             <div className={styles["edit-page"]}>
-                <img src={imgUrl.data} alt="" />
                 <div className={styles["form-edit"]}>
-                    <form onSubmit={onSubmit} className={styles["form-edit-add"]} noValidate>
+                    <form onSubmit={e => validate(e, id)} className={styles["form-edit-add"]} noValidate>
 
                         <div className={styles["grid"]}>
 
@@ -76,6 +44,7 @@ export default function EditPage() {
                                 placeholder='Name'
                                 onChange={(e) => setName(e.target.value)}
                             />
+                            <span className={styles.error}>{errors && errors.nameError}</span>
 
                             <label htmlFor="size">Size</label>
                             <input
@@ -86,7 +55,7 @@ export default function EditPage() {
                                 onChange={(e) => setSize(e.target.value)}
                                 value={size}
                             />
-
+                            <span className={styles.error}>{errors && errors.sizeError}</span>
                             <label htmlFor="price" >Price</label>
                             <input
                                 type='number'
@@ -96,7 +65,7 @@ export default function EditPage() {
                                 onChange={(e) => setPrice(e.target.value)}
                                 placeholder='Price'
                             />
-
+                            <span className={styles.error}>{errors && errors.priceError}</span>
                             <label htmlFor="rating" >Rating</label>
                             <input
                                 type='number'
@@ -104,9 +73,9 @@ export default function EditPage() {
                                 name='rating'
                                 value={rating}
                                 onChange={(e) => setRating(e.target.value)}
-                                placeholder='Rating'
+                                placeholder='Rating   0 --> 5'
                             />
-
+                            <span className={styles.error}>{errors && errors.ratingError}</span>
                         </div>
 
                         <span className={styles['title-field']}>Brand</span>
@@ -126,6 +95,8 @@ export default function EditPage() {
                                     />
                                 </label>
                             ))}
+                            <br />
+                            <span className={styles.error}>{errors && errors.brandError}</span>
                         </div>
 
                         <span className={styles['title-field']}>Category</span>
@@ -145,14 +116,14 @@ export default function EditPage() {
                                 </>
                             ))}
                             <br />
-
+                            <span className={styles.error}>{errors && errors.categoryError}</span>
                         </div>
 
-                        <button className={styles['save'] + btnStyles.btn}>Save</button>
+                        <button disabled={isPending} className={styles['save'] + btnStyles.btn}>{isPending ? 'Saving' : 'Save'}</button>
 
                     </form>
 
-                    {navOk && <Navigate to={'/dashboard'} replace={true}></Navigate>}
+                    {confirmed && <Navigate to={'/dashboard'} replace={true}></Navigate>}
 
                 </div>
             </div>

@@ -1,13 +1,14 @@
 import React from 'react';
-import styles from './dashboard.module.css'
-import Button from '../button/Button'
+import styles from './dashboardStyle.module.css'
+import Button from '../button/Button';
 import { useProducts } from '../../context/useData'
+import { Link } from 'react-router-dom';
 
 const Header = () => {
     const { searchOpened, toggleSearch } = useProducts()
     return (
         <header className={styles['header-dash']}>
-            <a href='/' className={styles['header-links']}>E-Commerce</a>
+            <Link to='/' className={styles['header-links']}>E-Commerce</Link>
             <div className={styles["buttons-header-dash"]}>
                 <Button
                     text={'Add Product'}

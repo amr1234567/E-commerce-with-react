@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from '../button/Button'
-import styles from './dashboard.module.css'
+import styles from './dashboardStyle.module.css'
 import { useProducts } from '../../context/useData'
 
 export default function ProductCard({ itemData }) {

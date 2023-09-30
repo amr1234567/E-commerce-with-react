@@ -1,9 +1,9 @@
 import React from 'react'
-import Button from '../button/Button'
-import ProductCard from './ProductCard'
+import Button from '../../../components/button/Button'
+import ProductCard from '../../../components/dashboard/ProductCard'
 import styles from './dashboard.module.css'
-import { ProductsContextProvidor, useProducts } from '../../context/useData'
-import Header from './Header'
+import { ProductsContextProvidor, useProducts } from '../../../context/useData'
+import Header from '../../../components/dashboard/Header'
 
 
 function Dashboard() {

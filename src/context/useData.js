@@ -1,17 +1,16 @@
 import React, { createContext, useContext, useEffect, useMemo, useReducer } from 'react'
 
-import womenImg1 from '../../assets/women/image1.svg'
-import womenImg2 from '../../assets/women/image2.svg'
-import womenImg3 from '../../assets/women/image3.svg'
-import womenImg4 from '../../assets/women/image4.svg'
-import womenImg5 from '../../assets/women/image5.svg'
-import womenImg6 from '../../assets/women/image6.svg'
-import manImg1 from '../../assets/men/image1.jpg'
-import manImg2 from '../../assets/men/image2.jpg'
-import manImg3 from '../../assets/men/image3.jpg'
-import manImg4 from '../../assets/men/image4.jpg'
-import manImg5 from '../../assets/men/image5.jpg'
-import { useFetch } from '../../Hooks/useFetch'
+import womenImg1 from '../assets/women/image1.svg'
+import womenImg2 from '../assets/women/image2.svg'
+import womenImg3 from '../assets/women/image3.svg'
+import womenImg4 from '../assets/women/image4.svg'
+import womenImg5 from '../assets/women/image5.svg'
+import womenImg6 from '../assets/women/image6.svg'
+import manImg1 from '../assets/men/image1.jpg'
+import manImg2 from '../assets/men/image2.jpg'
+import manImg3 from '../assets/men/image3.jpg'
+import manImg4 from '../assets/men/image4.jpg'
+import manImg5 from '../assets/men/image5.jpg'
 
 const imagesURLWomen = [womenImg1, womenImg2, womenImg3, womenImg4, womenImg5, womenImg6];
 const imagesURLMen = [manImg1, manImg2, manImg3, manImg4, manImg5]
@@ -29,15 +28,15 @@ let chooseRandomImage = (arr) => {
     return arr[Math.floor(Math.random() * arr.length)];
 }
 
-let setDataWithImages = (data) => {
-    let newobj = data.map((item) => (
+export let setDataWithImages = (data) => {
+    let newObj = data.map((item) => (
         {
-            ...item, img: chooseRandomImage((item.category.includes('men') || item.category.includes('Men')) ?
+            ...item, img: chooseRandomImage((item.category.includes('men')) ?
                 imagesURLMen :
                 imagesURLWomen)
         })
     )
-    return newobj;
+    return newObj;
 }
 
 let reduce = (obj, action) => {
@@ -59,7 +58,7 @@ export function useData() {
     const [{ data, searchOpened, search }, dispatch] = useReducer(reduce, { data: [], searchOpened: false, search: '' })
     useEffect(() => {
         // search ? 'http://localhost:8000/products?q=' + search :
-        
+
         fetch('http://localhost:8000/products')
             .then(res => res.json())
             .then(data => {

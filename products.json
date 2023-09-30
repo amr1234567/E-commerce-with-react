@@ -1,25 +1,28 @@
 {
   "products": [
     {
-      "name": "dresa",
+      "name": "dress",
       "price": 100,
       "size": [
-        "20",
-        "30",
-        "40",
-        "45"
+        20,
+        30,
+        40,
+        45,
+        55
       ],
       "category": [
+        "men",
+        "women",
         "children"
       ],
       "rating": 3,
-      "brand": "Zara",
+      "brand": "Gucci",
       "id": 1
     },
     {
       "id": 6,
       "name": "jacket",
-      "price": 250,
+      "price": 300,
       "category": [
         "men"
       ],
@@ -29,16 +32,16 @@
         26,
         30
       ],
-      "brand": "H&M",
-      "rating": 4
+      "brand": "Zara",
+      "rating": 4.2
     },
     {
       "name": "shortt",
       "price": 200,
       "size": [
-        "20",
-        "30",
-        "40"
+        20,
+        30,
+        40
       ],
       "category": [
         "men"
@@ -79,6 +82,22 @@
       ],
       "brand": "Nike",
       "rating": 5
+    },
+    {
+      "name": "newOne",
+      "price": 120,
+      "rating": 4.2,
+      "size": [
+        55,
+        65,
+        22
+      ],
+      "brand": "Addidas",
+      "category": [
+        "men",
+        "women"
+      ],
+      "id": 10
     }
   ]
 }
