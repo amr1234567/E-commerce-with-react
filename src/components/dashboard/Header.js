@@ -12,7 +12,7 @@ const Header = () => {
             <div className={styles["buttons-header-dash"]}>
                 <Button
                     text={'Add Product'}
-                    className={'add-dash'}
+                    className={''}
                     link={'/addProduct'}
                     hundleClick={() => { }}
                 />
@@ -23,7 +23,7 @@ const Header = () => {
                 {!searchOpened &&
                     <Button
                         text={'Search'}
-                        className={'search-button-dash'}
+                        className={''}
                         link={''}
                         hundleClick={() => {
                             toggleSearch()
@@ -53,7 +53,7 @@ const SearchForm = () => {
             <Button
                 type='submit'
                 text={'Search'}
-                className={'search-button-dash'}
+                className={''}
                 link={''}
                 hundleClick={() => {
                     hundleSearch()

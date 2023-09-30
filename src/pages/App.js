@@ -1,11 +1,12 @@
 import { Link, NavLink, Outlet, useLoaderData } from "react-router-dom";
 import Button from '../components/button/Button'
 import './app.css';
-import styles from '../components/button/button.module.css'
+import stylesBtn from '../components/button/button.module.css'
 import { ProductsContextProvidor, setDataWithImages } from "../context/useData";
 import yellowStar from '../assets/star-yellow.svg'
 import grayStar from '../assets/star-gray.svg'
-import RangeField from "../components/RangeField";
+import RangeField from "../components/rangeField/RangeField";
+import Footer from "../components/footer/Footer";
 
 
 const App = () => {
@@ -31,64 +32,16 @@ function AppChild() {
           <p className="decoration b">Unique</p>
           <p className="b">Clothes.</p>
           <p className="parag">Live for Influential and Innovative fashion!</p>
-          <Button
-            className={' shop-now'}
-            link="#"
-            text={'Shop Now'}
-            hundleClick={() => { }}
-          />
+          <button
+            className={stylesBtn['shop-now'] +' '+ stylesBtn['btn']}
+          >
+            Shop Now
+          </button>
         </div>
         <img src="assets/women/main-photo.png" alt="" />
       </section>
       <ProductsContainer />
-      <footer className="d-flex">
-        <div className="info d-flex flex-column w-20">
-          <h2>
-            <Link to={''}>E-Commerce</Link>
-          </h2>
-          <p>Complete your style with awesome clothes from us.</p>
-          <div className="mt-5 social-icons d-flex justify-content-around w-100">
-            <div className="icon d-flex align-items-center justify-content-center rounded-3">
-              <Link to="#"></Link>
-            </div>
-            <div className="icon d-flex align-items-center justify-content-center rounded-3 ">
-              <Link to={''}>
-                <i className="fa-brands fa-instagram" />
-              </Link>
-            </div>
-            <div className="icon d-flex align-items-center justify-content-center rounded-3">
-              <Link to={''}>
-                <i className="fa-brands fa-twitter" />
-              </Link>
-            </div>
-            <div className="icon d-flex align-items-center justify-content-center rounded-3">
-              <Link to={''}>
-                <i className="fa-brands fa-linkedin-in" />
-              </Link>
-            </div>
-          </div>
-        </div>
-
-        <div className="footer-divs d-flex flex-column w-20">
-          <h5>Developers</h5>
-          <Link to={''}>About</Link>
-          <Link to={''}>Contact us</Link>
-          <Link to={''}>Support</Link>
-          <Link to={''}>Careers</Link>
-        </div>
-        <div className="footer-divs d-flex flex-column w-20">
-          <h5>Quick Link</h5>
-          <Link to={''}>Share Location</Link>
-          <Link to={''}>Orders Tracking</Link>
-          <Link to={''}>Size Guide</Link>
-          <Link to={''}>FAQs</Link>
-        </div>
-        <div className="footer-divs d-flex flex-column w-20">
-          <h5>Legal</h5>
-          <Link to={''}>Terms &amp; conditions</Link>
-          <Link to={''}>Privacy Policy</Link>
-        </div>
-      </footer>
+      <Footer />
     </div>
 
   );
@@ -100,13 +53,13 @@ function Header() {
       <Link to="#" className="fw-bold main-name">E-Commerce</Link>
       <div className="buttons d-flex ">
         <Button
-          className={styles['btn']}
+          className={stylesBtn['btn']}
           link="#"
           hundleClick={() => { }}
           text={"Sign In"}
         />
         <Button
-          className={styles['btn']}
+          className={stylesBtn['btn']}
           link="#"
           hundleClick={() => { }}
           text={'Sign Up'}
@@ -125,11 +78,11 @@ function ProductsContainer() {
       </p>
       <div className="filter mt-5 d-flex justify-content-around flex-wrap align-items-center w-75">
 
-        <NavLink to={''} className={styles['btn'] + " mb-3"}>All</NavLink>
-        <NavLink to={'specific/men'} className={styles['btn'] + " mb-3"}>Men</NavLink>
-        <NavLink to={'specific/women'} className={styles['btn'] + " mb-3"}>ًWomen</NavLink>
-        <NavLink to={'specific/children'} className={styles['btn'] + " mb-3"}>Children</NavLink>
-        <Link to={'range'} className={styles['btn'] + " mb-3"}>Range</Link>
+        <NavLink to={''} className={stylesBtn['btn'] + " mb-3"}>All</NavLink>
+        <NavLink to={'specific/men'} className={stylesBtn['btn'] + " mb-3"}>Men</NavLink>
+        <NavLink to={'specific/women'} className={stylesBtn['btn'] + " mb-3"}>ًWomen</NavLink>
+        <NavLink to={'specific/children'} className={stylesBtn['btn'] + " mb-3"}>Children</NavLink>
+        <Link to={'range'} className={stylesBtn['btn'] + " mb-3"}>Range</Link>
       </div>
       <Outlet />
     </section>
@@ -151,7 +104,6 @@ export const SpecificCategory = () => {
     for (let i = 0; i < 5 - Math.floor(rating); i++) {
       stars.push(grayStar)
     }
-    console.log(stars)
     return stars;
   }
   return (
@@ -210,7 +162,7 @@ export async function loaderSpesific({ params }) {
 export function RangeProducts() {
   return (
     <div>
-      <div className="ranges-div justify-content-between p-5 flex-wrap">
+      <div className="ranges-div d-flex justify-content-between p-5">
         <RangeField />
       </div>
       <div className="products-container d-flex justify-content-between flex-wrap">

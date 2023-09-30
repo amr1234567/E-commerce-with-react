@@ -4,6 +4,7 @@ import ProductCard from '../../../components/dashboard/ProductCard'
 import styles from './dashboard.module.css'
 import { ProductsContextProvidor, useProducts } from '../../../context/useData'
 import Header from '../../../components/dashboard/Header'
+import Footer from '../../../components/footer/Footer'
 
 
 function Dashboard() {
@@ -14,13 +15,13 @@ function Dashboard() {
             <main className={styles['products-cards-dash']}>
                 <div className={styles["buttons-order"]}>
                     <Button
-                        className={'sort-des'}
+                        className={''}
                         hundleClick={() => decindingOrder()}
                         link={""}
                         text={'Desinding'}
                     />
                     <Button
-                        className={'sort-ass'}
+                        className={''}
                         hundleClick={() => assendingOrder()}
                         link={""}
                         text={'Assinding'}
@@ -37,6 +38,7 @@ function Dashboard() {
                     })
                 }
             </main>
+            <Footer />
         </div>
     )
 }

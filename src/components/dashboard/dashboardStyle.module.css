@@ -17,14 +17,14 @@
 
 .header-links {
     font-size: 1.5rem;
-    color: var(--color5);
+    color: var(--color4);
     font-weight: 700;
     text-decoration: none;
     transition: 0.12s ease-in;
 }
 
 .header-links:hover {
-    transform: scale(1.01);
+    transform: scale(1.07) translateX(30px);
 }
 
 .buttons-header-dash {
@@ -42,23 +42,11 @@
     right: 10px;
 }
 
-.products-cards-dash {
-    display: flex;
-    flex-wrap: wrap;
-    width: 90%;
-    margin: 0rem auto;
-    padding-top: 6rem;
-    gap: 3%;
-}
+/* Product Cards */
 
 .product-card-dash {
-    width: 30%;
-    margin-bottom: 1rem;
-    display: flex;
-    flex-direction: column;
-    padding: 3%;
-    transition: 0.2s ease-out;
-    border-radius: 1rem;
+    margin-top: 2rem;
+    color: var(--color1);
 }
 
 .product-card-dash:hover {
@@ -78,25 +66,33 @@
     letter-spacing: 0.1rem;
 }
 
-
+.name-of-product{
+    font-size: 1.6rem;
+    transition: 0.2s ease-in-out;
+}
 .sizes,
 .categories,
 .brand-product-box,
 .price-product-box {
     font-size: 1.2rem;
     margin-bottom: 1rem;
+    color: var(--color1);
 }
-
+.brand-product-box>span,.price-product-box>span{
+    color: var(--color2);
+}
 .spans {
-    background-color: var(--color5);
+    background-color: var(--color3);
     padding: 0.4rem;
+    cursor: pointer;
     border-radius: 1rem;
     transition: 0.1s ease-in;
     margin-bottom: 1rem;
 }
 
 .spans:hover {
-    background-color: var(--color3);
+    background-color: var(--color1);
+    color: var(--color4);
 }
 
 .container-spans {

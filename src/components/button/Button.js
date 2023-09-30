@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import styles from './button.module.css';
 
@@ -8,8 +8,10 @@ export default function Button({ link, className, hundleClick, text }) {
             to={link}
         >
             <button
-                className={styles.btn + ' ' + styles[className]}
-                onClick={hundleClick}
+                className={className ? className : styles.btn}
+                onClick={() => {
+                    hundleClick()
+                }}
             >
                 {text}
             </button>

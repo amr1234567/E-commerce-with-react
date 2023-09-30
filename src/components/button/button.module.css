@@ -3,7 +3,7 @@
     outline: none;
     background-color: white;
     color: var(--color4);
-    padding:1rem;
+    padding: 1rem;
     font-size: 1.2rem;
     cursor: pointer;
     border-radius: 2rem;
@@ -20,9 +20,17 @@
 .del-btn {
     border-color: red;
 }
+
 .del-btn:hover {
     background-color: red;
     border-color: var(--color1);
     color: var(--color1);
 }
 
+@media (max-width:620px) {
+    .btn {
+        border: 1.5px solid var(--color4);
+        padding: 0.5rem;
+        font-size: 1.1rem;
+    }
+}

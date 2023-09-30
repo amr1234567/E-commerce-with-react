@@ -1,0 +1,66 @@
+.main {
+    gap: 2rem;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.main>div {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.brands-select {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 1rem;
+}
+
+.brand-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.size-range,
+.rating-range,
+.price-range {
+    gap: 1rem;
+}
+
+.size-range input,
+.rating-range input,
+.price-range input {
+    max-width: 12rem;
+    outline: none;
+    border-radius: 1rem;
+    border: 1px solid gray;
+    height: 1.5rem;
+    padding-left: 2rem;
+}
+
+.btn {
+    border: 1.5px solid var(--color4);
+    outline: none;
+    background-color: white;
+    color: var(--color4);
+    padding: 0.5rem;
+    font-size: 0.6rem;
+    cursor: pointer;
+    border-radius: 2rem;
+    transition: 0.2s ease-out;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: var(--color4);
+    color: white;
+}
+
+.buttons-form{
+    flex-direction: row;
+    justify-content: center !important;
+}
